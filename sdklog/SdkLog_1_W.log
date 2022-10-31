@@ -1,0 +1,55 @@
+[2022-10-29 19:19:49.905][ERR] CCoreGlobalCtrlBase::LoadDSo, HPR_LoadDSo Failed, Path[C:/ideawork/HK-entrance-guard/Test1/lib/zlib1.dll] syserror[126]
+[2022-10-29 19:19:49.905][ERR] Load zlib failed[syserr: 126]
+[2022-10-29 19:19:49.905][INF] The COM:HCCoreBase ver is 6.1.4.15, 2020_03_05. Async:1.
+[2022-10-29 19:19:49.905][INF] The COM:Core ver is 6.1.9.4, 2022_04_12. Async:1.
+[2022-10-29 19:19:49.905][INF] This HCNetSDK ver is 6.1.9.4 Ver 2022_04_12.
+[2022-10-29 19:19:50.060][INF] Login dev 192.168.0.69:8000.
+[2022-10-29 19:19:50.061][INF] dwTotalNum[2048]
+[2022-10-29 19:19:50.071][INF] Private connect 192.168.0.69:8000 sock=2824 this=0x2751b204 cmd=0x10000 port=55664
+[2022-10-29 19:19:50.072][INF] LogonDev1 in[192.168.0.69:8000]
+[2022-10-29 19:19:50.072][ERR] CCoreGlobalCtrlBase::LoadDSo, HPR_LoadDSo Failed, Path[C:/ideawork/HK-entrance-guard/Test1/lib/libeay32.dll] syserror[126]
+[2022-10-29 19:19:50.072][ERR] Load BASE_DLL_LIBEAY failed[syserr: 126]
+[2022-10-29 19:19:50.074][DBG] CCoreGlobalCtrlBase::LoadDSo, HPR_LoadDSo Succ, Path[C:/ideawork/HK-entrance-guard/Test1/lib/libcrypto-1_1-x64.dll], hHandleRet[476643328]
+[2022-10-29 19:19:50.074][DBG] Load [libcrypto-1_1-x64.dll] SUCC, Real Path[C:\ideawork\HK-entrance-guard\Test1\lib\libcrypto-1_1-x64.dll]
+[2022-10-29 19:19:50.075][DBG] CCoreGlobalCtrlBase::LoadDSo, HPR_LoadDSo Succ, Path[C:/ideawork/HK-entrance-guard/Test1/lib/libssl-1_1-x64.dll], hHandleRet[696123392]
+[2022-10-29 19:19:50.075][DBG] Load [libssl-1_1-x64.dll] SUCC, Real Path[C:\ideawork\HK-entrance-guard\Test1\lib\libssl-1_1-x64.dll]
+[2022-10-29 19:19:50.075][INF] SSLTRANSAPI::IsAllAPILoaded, SSL_library_init Unload
+[2022-10-29 19:19:50.075][INF] OpenSSL, Not All Function Loaded!
+[2022-10-29 19:19:50.076][INF] SSLTRANSAPI::PrintVersion, OpenSSL version info [OpenSSL 1.1.1l  24 Aug 2021]
+[2022-10-29 19:19:50.076][INF] CSSLTrans::SSLCtxInit, dwSSLVersion[6], m_fnTLSServerMethod
+[2022-10-29 19:19:50.479][DBG] CComBase::Load, Load szDllPath[C:/ideawork/HK-entrance-guard/Test1/lib/HCNetSDKCom/HCVoiceTalk.dll] SUCC
+[2022-10-29 19:19:50.480][INF] AbilityAnalyze---Init-- start
+[2022-10-29 19:19:50.481][ERR] AbilityAnalyze---open zip package error, package path C:/ideawork/HK-entrance-guard/Test1/lib/LocalXml.zip
+[2022-10-29 19:19:50.481][INF] The COM:VoiceTalk ver is 6.1.9.4, 2022_04_12.
+[2022-10-29 19:19:50.483][DBG] CComBase::Load, Load szDllPath[C:/ideawork/HK-entrance-guard/Test1/lib/HCNetSDKCom/HCGeneralCfgMgr.dll] SUCC
+[2022-10-29 19:19:50.483][INF] The COM:HCGeneralCfgMgr ver is 6.1.9.4, 2022_04_12.
+[2022-10-29 19:19:50.485][DBG] CComBase::Load, Load szDllPath[C:/ideawork/HK-entrance-guard/Test1/lib/HCNetSDKCom/HCPlayBack.dll] SUCC
+[2022-10-29 19:19:50.485][INF] The COM:HCPlayback ver is 6.1.9.4, 2022_04_12.
+[2022-10-29 19:19:50.486][DBG] CComBase::Load, Load szDllPath[C:/ideawork/HK-entrance-guard/Test1/lib/HCNetSDKCom/HCIndustry.dll] SUCC
+[2022-10-29 19:19:50.486][INF] The COM:HCIndustry ver is 6.1.9.4, 2022_04_12.
+[2022-10-29 19:19:50.488][DBG] CComBase::Load, Load szDllPath[C:/ideawork/HK-entrance-guard/Test1/lib/HCNetSDKCom/HCDisplay.dll] SUCC
+[2022-10-29 19:19:50.488][INF] The COM:HCDisplay ver is 6.1.9.4, 2022_04_12.
+[2022-10-29 19:19:50.489][DBG] CComBase::Load, Load szDllPath[C:/ideawork/HK-entrance-guard/Test1/lib/HCNetSDKCom/HCPreview.dll] SUCC
+[2022-10-29 19:19:50.489][INF] The COM:Preview ver is 6.1.9.4, 2022_04_12.
+[2022-10-29 19:19:50.491][DBG] CComBase::Load, Load szDllPath[C:/ideawork/HK-entrance-guard/Test1/lib/HCNetSDKCom/HCAlarm.dll] SUCC
+[2022-10-29 19:19:50.491][INF] The COM:HCAlarm ver is 6.1.9.4, 2022_04_12.
+[2022-10-29 19:19:50.492][DBG] set dwCommToDVR[0x112039] dwDVRReturn[0]  dwoutBufSize[140]
+[2022-10-29 19:19:50.497][INF] Private connect 192.168.0.69:8000 sock=2932 this=0x2751b204 cmd=0x112039 port=55667
+[2022-10-29 19:19:50.645][INF] Private connect 192.168.0.69:8000 sock=2912 this=0x2751b204 cmd=0x11202c port=55668
+[2022-10-29 19:19:50.671][DBG] set dwCommToDVR[0x11202d] dwDVRReturn[0]  dwoutBufSize[920]
+[2022-10-29 19:19:50.692][INF] Private connect 192.168.0.69:8000 sock=2932 this=0x2751b204 cmd=0x11202d port=55669
+[2022-10-29 19:19:50.715][DBG] CLongConfigSessionEx::start succ [userid:0][command:2550]
+[2022-10-29 19:19:50.721][INF] Private connect 192.168.0.69:8000 sock=2932 this=0x2751b204 cmd=0x112200 port=55670
+[2022-10-29 19:19:50.772][DBG] callback [2]data len[30720].
+[2022-10-29 19:19:50.800][INF] [0]CLongConfigSession::Stop in
+[2022-10-29 19:19:50.800][ERR] [DoRealRecvEx] select return 1, socket=-1, sys_err=0
+[2022-10-29 19:19:50.800][INF] [CLongLinkCtrlPrivate::RecvThreadFunc] RecvThreadFunc EXIT, this=0x27997448
+[2022-10-29 19:19:50.805][DBG] CLongConfigSessionEx::start succ [userid:0][command:2551]
+[2022-10-29 19:19:50.810][INF] Private connect 192.168.0.69:8000 sock=2912 this=0x2751b204 cmd=0x112201 port=55672
+[2022-10-29 19:19:59.190][DBG] callback [2]data len[4096].
+[2022-10-29 19:19:59.206][INF] [1]CLongConfigSession::Stop in
+[2022-10-29 19:19:59.206][INF] [CLongLinkCtrlPrivate::RecvThreadFunc] RecvThreadFunc EXIT, this=0x27997448
+[2022-10-29 19:19:59.209][INF] COM_Logout[0][0]
+[2022-10-29 19:19:59.210][DBG] CUserMgr::UnRegisterHeartProxy[0]
+[2022-10-29 19:19:59.214][INF] Private connect 192.168.0.69:8000 sock=2876 this=0x2751b204 cmd=0x10100 port=55673
+[2022-10-29 19:19:59.227][INF] CTransUnitMgr::UnloadTransUnitLib
