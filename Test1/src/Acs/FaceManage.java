@@ -62,7 +62,7 @@ public final class FaceManage {
             int picdataLength = 0;
             try {
 
-                picfile = new FileInputStream(new File("C:\\ideawork\\HK-entrance-guard\\AddFacePicture\\lhj.jpg"));
+                picfile = new FileInputStream(new File("C:\\DevelopTool\\ideaWork\\HK-entrance-guard\\AddFacePicture\\lhj.jpg"));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }

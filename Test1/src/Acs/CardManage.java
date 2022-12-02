@@ -18,7 +18,7 @@ public final class CardManage {
      * @param cardNo 卡号
      * @throws JSONException
      */
-    public static void addCardInfo(int userID,String cardNo) throws JSONException {
+    public static void addCardInfo(int userID,String employeeNo,String cardNo) throws JSONException {
         HCNetSDK.BYTE_ARRAY ptrByteArray = new HCNetSDK.BYTE_ARRAY(1024);    //数组
         String strInBuffer = "POST /ISAPI/AccessControl/CardInfo/Record?format=json";
         System.arraycopy(strInBuffer.getBytes(), 0, ptrByteArray.byValue, 0, strInBuffer.length());//字符串拷贝到数组中
@@ -35,7 +35,7 @@ public final class CardManage {
             HCNetSDK.BYTE_ARRAY lpInput = new HCNetSDK.BYTE_ARRAY(1024);    //数组
             String strJsonData = "{\n" +
                     "    \"CardInfo\" : {\n" +
-                    "        \"employeeNo\":\"ceshi1\", \n" +
+                    "        \"employeeNo\":\""+employeeNo+"\", \n" +
                     "        \"cardNo\":\""+cardNo+"\", \n" +
                     "        \"cardType\":\"normalCard\"\n" +
                     "        } \n" +

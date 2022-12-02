@@ -91,11 +91,11 @@ public class AcsMain {
 		/**
 		 * 人员管理模块
 		 */
-//		UserManage.SearchUserInfo(lUserID);		//查询所有人员
+		UserManage.SearchUserInfo(lUserID);		//查询所有人员
 		// 人员计划模板配置
 		UserManage.SetCardTemplate(lUserID,2);
 		// 删除用户
-//		UserManage.deleteUserInfo(lUserID);
+		//UserManage.deleteUserInfo(lUserID);
 
 //		for (int j = 0; j < 100 ; j++) {
 //			String epmNo="stu220427"+j;
@@ -119,7 +119,7 @@ public class AcsMain {
 		 * 卡号管理模块
 		 */
 //		CardManage.searchCardInfo(lUserID,"ceshi1");
-//		CardManage.addCardInfo(lUserID,"12345");
+		CardManage.addCardInfo(lUserID,epmNo,"2332300416");
 //		CardManage.searchCardInfo(lUserID,"test111");
 //		CardManage.searchAllCardInfo(lUserID);
 //		CardManage.deleteCardInfo(lUserID,"111");
@@ -128,7 +128,7 @@ public class AcsMain {
 		/**
 		 * 指纹管理模块
 		 */
-//		FingerManage.fingerCapture(lUserID);
+		//FingerManage.fingerCapture(lUserID);
 //		FingerManage.fingerCpaureByisapi(lUserID);
 /*		FingerManage.fingerCpaureByisapi(lUserID);
 		eventSearch.SearchAllEvent(lUserID);
@@ -141,19 +141,25 @@ public class AcsMain {
 		/**
 		 * 事件查询
 		 */
-//		eventSearch.SearchAllEvent(lUserID);
+		//eventSearch.SearchAllEvent(lUserID);
 
 		/**
 		 * 报警布防模块
 		 */
-//		Alarm.SetAlarm(lUserID);
+		//Alarm.SetAlarm(lUserID);
+
+
+		/**
+		 * 报警监控模块（没用到）
+		 */
+		//Alarm.StartListen();
 
 
 		/**
 		 * 增加sleep时间，保证程序一直运行，
 
 		 */
-//		Thread.sleep(30000);
+		//Thread.sleep(600000);
 		/**
 		 * 撤防，端口监听，注销设备
 		 */

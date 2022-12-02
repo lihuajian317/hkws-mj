@@ -14,6 +14,20 @@ import java.nio.ByteBuffer;
  */
 public final class eventSearch {
 
+
+    /**
+     * 设备事件主动上传
+     */
+    public static void dVRMessageCallBack () {
+        //HCNetSDK.NET_DVR_ACS_EVENT_COND struAcsEventCond = new HCNetSDK.NET_DVR_SetDVRMessageCallBack_V50();
+    }
+
+    /**
+     * 主动获取设备事件
+     * @param lUserID
+     * @throws UnsupportedEncodingException
+     * @throws InterruptedException
+     */
     public static void SearchAllEvent(int lUserID) throws UnsupportedEncodingException, InterruptedException {
         int i = 0; //事件条数
         HCNetSDK.NET_DVR_ACS_EVENT_COND struAcsEventCond = new HCNetSDK.NET_DVR_ACS_EVENT_COND();
@@ -24,27 +38,33 @@ public final class eventSearch {
         struAcsEventCond.dwMinor = 0; //
         //开始时间
         struAcsEventCond.struStartTime.dwYear = 2022;
-        struAcsEventCond.struStartTime.dwMonth = 4;
-        struAcsEventCond.struStartTime.dwDay = 27;
-        struAcsEventCond.struStartTime.dwHour = 9;
-        struAcsEventCond.struStartTime.dwMinute = 0;
+        struAcsEventCond.struStartTime.dwMonth = 11;
+        struAcsEventCond.struStartTime.dwDay = 1;
+        struAcsEventCond.struStartTime.dwHour = 17;
+        struAcsEventCond.struStartTime.dwMinute = 20;
         struAcsEventCond.struStartTime.dwSecond = 0;
         //结束时间
         struAcsEventCond.struEndTime.dwYear = 2022;
-        struAcsEventCond.struEndTime.dwMonth = 4;
-        struAcsEventCond.struEndTime.dwDay = 30;
-        struAcsEventCond.struEndTime.dwHour = 16;
-        struAcsEventCond.struEndTime.dwMinute = 0;
+        struAcsEventCond.struEndTime.dwMonth = 11;
+        struAcsEventCond.struEndTime.dwDay = 1;
+        struAcsEventCond.struEndTime.dwHour = 17;
+        struAcsEventCond.struEndTime.dwMinute = 23;
         struAcsEventCond.struEndTime.dwSecond = 0;
         struAcsEventCond.wInductiveEventType = 1;
         struAcsEventCond.byPicEnable = 1; //是否带图片，0-不带图片，1-带图片
         struAcsEventCond.write();
         Pointer ptrStruEventCond = struAcsEventCond.getPointer();
+        /**
+         * NET_DVR_StartRemoteConfig 主动获取事件接口
+         * 设备事件获取命令码：NET_DVR_GET_ACS_EVENT
+         *
+         */
         int m_lSearchEventHandle = AcsMain.hCNetSDK.NET_DVR_StartRemoteConfig(lUserID, HCNetSDK.NET_DVR_GET_ACS_EVENT, ptrStruEventCond, struAcsEventCond.size(), null, null);
         if (m_lSearchEventHandle<=-1)
         {
             System.out.println("NET_DVR_StartRemoteConfig调用失败，错误码：" + AcsMain.hCNetSDK.NET_DVR_GetLastError());
         }
+        //
         HCNetSDK.NET_DVR_ACS_EVENT_CFG struAcsEventCfg = new HCNetSDK.NET_DVR_ACS_EVENT_CFG();
         struAcsEventCfg.read();
         struAcsEventCfg.dwSize = struAcsEventCfg.size();
@@ -52,6 +72,9 @@ public final class eventSearch {
         Pointer ptrStruEventCfg = struAcsEventCfg.getPointer();
         while (true) {
             System.out.println("i=" + i);
+            /**
+             * NET_DVR_GetNextRemoteConfig: 逐条获取结果命令
+             */
             int dwEventSearch = AcsMain.hCNetSDK.NET_DVR_GetNextRemoteConfig(m_lSearchEventHandle, ptrStruEventCfg, struAcsEventCfg.size());
             if (dwEventSearch <= -1) {
                 System.out.println("NET_DVR_GetNextRemoteConfig接口调用失败，错误码：" + AcsMain.hCNetSDK.NET_DVR_GetLastError());

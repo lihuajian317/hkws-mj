@@ -22,7 +22,7 @@ public final class Alarm {
             m_strAlarmInfo.dwSize = m_strAlarmInfo.size();
             m_strAlarmInfo.byLevel = 1;  //布防等级
             m_strAlarmInfo.byAlarmInfoType = 1;   // 智能交通报警信息上传类型：0- 老报警信息（NET_DVR_PLATE_RESULT），1- 新报警信息(NET_ITS_PLATE_RESULT)
-            m_strAlarmInfo.byDeployType = 0;   //布防类型 0：客户端布防 1：实时布防
+            m_strAlarmInfo.byDeployType = 1;   //布防类型 0：客户端布防 1：实时布防
             m_strAlarmInfo.write();
             AcsMain.lAlarmHandle = AcsMain.hCNetSDK.NET_DVR_SetupAlarmChan_V41(userID, m_strAlarmInfo);
             System.out.println("lAlarmHandle: " + AcsMain.lAlarmHandle);
